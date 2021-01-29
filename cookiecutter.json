@@ -1,0 +1,16 @@
+{
+  "project_name": "ProjectName",
+  "project_slug": "{{ cookiecutter.project_name.lower()|replace('-', '_')|replace(' ', '_')|replace('.', '_')|trim() }}",
+  "author": "Ezequiel Cavallo",
+  "description": "Description",
+  "domain": "example.com",
+  "email": "example@example.com",
+  "storage": [
+    "AZURE",
+    "AWS",
+    "GC",
+    "None"
+  ],
+  "DRF": "y",
+  "celery": "y"
+ }

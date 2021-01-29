@@ -1,0 +1,32 @@
+# Redis
+REDIS_URL=redis://redis:6379/0
+
+{% if cookiecutter.celery == 'y' %}
+# Flower
+CELERY_FLOWER_USER=SET A FLOWER USER
+CELERY_FLOWER_PASSWORD=SET A FLOWER PASSWORD
+{% endif %}
+
+# Django
+DJANGO_SECRET_KEY=SET A SECRET KEY
+DJANGO_ADMIN_URL=admin-url
+DJANGO_SETTINGS_MODULE=config.settings.production
+
+# Mailgun
+MAILGUN_API_KEY=SETYOURKEY
+MAILGUN_DOMAIN=SETYOURMAILGUNDOMAIN
+
+{% if cookiecutter.storage == 'AWS' %}
+# AWS
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_STORAGE_BUCKET_NAME=
+{% elif cookiecutter.storage == 'AZURE' %}
+# AZURE
+AZURE_ACCOUNT_KEY=
+AZURE_ACCOUNT_NAME=
+{% elif cookiecutter.storage == 'GC' %}
+# GC
+GOOGLE_APPLICATION_CREDENTIALS=
+GC_STORAGE_BUCKET_NAME=
+{% endif %}

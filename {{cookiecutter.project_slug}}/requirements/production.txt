@@ -1,0 +1,15 @@
+-r ./base.txt
+
+gunicorn==20.0.4
+
+# Static files
+{%- if cookiecutter.storage == 'AWS' %}
+django-storages[boto3]==1.11.1
+{%- elif cookiecutter.storage == 'AZURE' %}
+django-storages[azure]==1.11.1
+{%- elif cookiecutter.storage == 'GC' %}
+django-storages[google]==1.11.1
+{% endif %}
+
+# Email
+django-anymail[mailgun]==8.1
