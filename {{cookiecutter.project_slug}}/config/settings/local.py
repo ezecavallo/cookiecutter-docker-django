@@ -14,6 +14,9 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
 ]
 
+# Admin
+ADMIN_URL = 'admin'
+
 # Templates
 TEMPLATES[0]['OPTIONS']['debug'] = DEBUG  # NOQA
 

@@ -1,7 +1,6 @@
 """Base settings to build other settings files upon."""
 
 import environ
-import datetime
 
 ROOT_DIR = environ.Path(__file__) - 3
 APPS_DIR = ROOT_DIR.path('{{ cookiecutter.project_slug }}')
@@ -164,7 +163,6 @@ CELERYD_TASK_SOFT_TIME_LIMIT = 60
 
 {%- if cookiecutter.DRF == 'y' %}
 # REST Framework
-REST Framework
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',

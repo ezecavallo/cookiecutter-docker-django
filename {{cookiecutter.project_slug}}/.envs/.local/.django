@@ -1,6 +1,9 @@
 # Redis
 REDIS_URL=redis://redis:6379/0
 
+# Django
+DJANGO_SETTINGS_MODULE=config.settings.local
+
 {% if cookiecutter.celery == 'y' %}
 # Flower
 CELERY_FLOWER_USER=AkSCzUUkrubMopHkMlHHIiFnUzKhIidG
