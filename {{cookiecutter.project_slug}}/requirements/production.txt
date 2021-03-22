@@ -9,7 +9,7 @@ django-storages[boto3]==1.11.1
 django-storages[azure]==1.11.1
 {%- elif cookiecutter.storage == 'GC' %}
 django-storages[google]==1.11.1
-{% endif %}
+{%- endif %}
 
 # Email
 django-anymail[mailgun]==8.1

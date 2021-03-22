@@ -45,9 +45,9 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-    {% if cookiecutter.DRF == "y" %}
+    {%- if cookiecutter.DRF == "y" %}
     "rest_framework",
-    {% endif %}
+    {%- endif %}
 ]
 LOCAL_APPS = [
 ]

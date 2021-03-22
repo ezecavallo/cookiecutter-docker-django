@@ -11,9 +11,11 @@ Django==3.1.5
 # Environment
 django-environ==0.4.5
 
+{%- if cookiecutter.DRF == 'y' %}
 # Django REST Framework
 djangorestframework==3.12.2
 django-filter==2.4.0
+{%- endif %}
 
 # JWT
 #PyJWT
@@ -29,10 +31,10 @@ whitenoise==5.2.0
 # Redis
 redis>=3.5.3
 
-{% if cookiecutter.celery == "y" %}
+{%- if cookiecutter.celery == "y" %}
 # Celery
 django-redis==4.12.1
 celery==4.4.7
 tornado>=6.1
 flower==0.9.7
-{% endif %}
+{%- endif %}
